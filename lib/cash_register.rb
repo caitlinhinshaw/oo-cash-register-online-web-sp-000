@@ -8,9 +8,9 @@ class CashRegister
     @items = []
   end
 
-  def add_item(title, price, quantity = 1)
+  def add_item(item, price, quantity = 1)
     @total += price*quantity
-    quantity.times {@items << title}
+    quantity.times {@items << item}
     @last_transaction = price*quantity
   end
 
